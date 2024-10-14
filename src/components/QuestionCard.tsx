@@ -37,8 +37,13 @@ export default function QuestionCard() {
         }
         const response = await axios.post<QuizResponse>('https://namastequiz-backend.vercel.app/chat', { topic });
         setQuestionList(response.data.response);
-      } catch (e: any) {
-        console.error('There was an error making the POST request:', e);
+      } catch (e: unknown) {
+        // You can check the type of the error and handle accordingly
+        if (e instanceof Error) {
+          console.error('There was an error making the POST request:', e.message);
+        } else {
+          console.error('There was an unknown error:', e);
+        }
       }
     };
     fetchQuestion();

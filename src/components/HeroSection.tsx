@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import Link from 'next/link';
 import { Button } from "@/components/ui/button";
@@ -10,10 +10,11 @@ import Image from 'next/image';
 
 interface LandingPageClientProps {
     isUserAuthenticated: boolean; 
-  }
+}
   
 export default function LandingPageClient({ isUserAuthenticated }: LandingPageClientProps) {
   const controls = useAnimation();
+
   useEffect(() => {
     controls.start(i => ({
       y: [0, -10, 0],
@@ -44,7 +45,7 @@ export default function LandingPageClient({ isUserAuthenticated }: LandingPageCl
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                Dive into our quirky quizzes and challenge yourself with a twist of humor. Are you ready to prove you're both smart and sassy?
+                Dive into our quirky quizzes and challenge yourself with a twist of humor. Are you ready to prove you&apos;re both smart and sassy?
               </motion.p>
               <motion.div
                 className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
