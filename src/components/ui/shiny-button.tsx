@@ -32,7 +32,7 @@ interface ShinyButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>
 
 const ShinyButton: React.FC<ShinyButtonProps> = ({ children, className, ...props }) => {
   return (
-    //@ts-ignore
+    
     <motion.button
       {...animationProps}
       {...(props as React.ButtonHTMLAttributes<HTMLButtonElement>)} // Explicit type casting

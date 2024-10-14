@@ -1,5 +1,4 @@
 'use client'
-import ShinyButton from '@/components/ui/shiny-button'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { motion } from 'framer-motion'
 import { Trophy } from 'lucide-react'

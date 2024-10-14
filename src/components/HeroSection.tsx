@@ -4,13 +4,15 @@ import { useState, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import Link from 'next/link';
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { Sparkles, Brain, Trophy, Rocket, ArrowRight, CheckCircle, Star } from 'lucide-react';
 import Image from 'next/image';
 
-export default function LandingPageClient({ isUserAuthenticated }: any) {
-  const [email, setEmail] = useState('');
+interface LandingPageClientProps {
+    isUserAuthenticated: boolean; 
+  }
+  
+export default function LandingPageClient({ isUserAuthenticated }: LandingPageClientProps) {
   const controls = useAnimation();
   useEffect(() => {
     controls.start(i => ({
