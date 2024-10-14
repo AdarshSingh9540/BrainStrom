@@ -16,7 +16,7 @@ interface QuizResponse {
   response: Question[];
 }
 
-export default function QuestionCard() {
+export const QuestionContent = () => {
   const searchParams = useSearchParams();
   const topic = searchParams.get('topic');
   const [questionList, setQuestionList] = useState<Question[]>([]);
@@ -26,7 +26,7 @@ export default function QuestionCard() {
   const [totalCorrect, setTotalCorrect] = useState(0);
   const [isQuizComplete, setIsQuizComplete] = useState(false);
   const [showCheckResult, setShowCheckResult] = useState(false); 
-  
+
   const router = useRouter(); 
 
   useEffect(() => {
@@ -38,7 +38,6 @@ export default function QuestionCard() {
         const response = await axios.post<QuizResponse>('https://namastequiz-backend.vercel.app/chat', { topic });
         setQuestionList(response.data.response);
       } catch (e: unknown) {
-        // You can check the type of the error and handle accordingly
         if (e instanceof Error) {
           console.error('There was an error making the POST request:', e.message);
         } else {
@@ -151,4 +150,5 @@ export default function QuestionCard() {
       </div>
     </div>
   );
-}
+};
+

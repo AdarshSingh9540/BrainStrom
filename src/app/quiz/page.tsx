@@ -1,10 +1,10 @@
-import QuestionCard from '@/components/QuestionCard'
-import React from 'react'
+import { QuestionContent } from '@/components/QuestionCard'
+import { Suspense } from 'react';
 
-export default function page() {
-  return (
-    <div>
-        <QuestionCard/>
-    </div>
-  )
-}
+export default function QuestionCard() {
+    return (
+      <Suspense fallback={<div>Loading...</div>}>
+        <QuestionContent/>
+      </Suspense>
+    );
+  }
