@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React from "react";
-import { Sparkles } from "lucide-react";
 import { Button } from "./ui/button";
 import { RegisterLink } from "@kinde-oss/kinde-auth-nextjs/components";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
@@ -19,7 +18,7 @@ export default async function Navbar() {
             href="/"
             className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500 flex items-center"
           >
-            <Sparkles className="mr-2" />
+           
             BrainStorm
           </Link>
           <div className="hidden md:flex space-x-16">
