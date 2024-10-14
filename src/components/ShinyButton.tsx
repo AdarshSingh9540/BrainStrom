@@ -1,5 +1,5 @@
-import ShinyButton from "@/components/ui/shiny-button";
+import { Button } from "./ui/button";
 
 export function ShinyButtonDemo() {
-  return <ShinyButton>Shiny Button</ShinyButton>;
+  return <Button>Shiny Button</Button>;
 }

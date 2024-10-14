@@ -2,9 +2,9 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import ShineBorder from './ui/shine-border';
-import ShinyButton from './ui/shiny-button';
 import { useSearchParams } from 'next/navigation';
 import axios from 'axios';
+import { Button } from './ui/button';
 
 interface Question {
   Question: string;
@@ -122,28 +122,28 @@ export default function QuestionCard() {
             <div className="flex space-x-4 mt-6">
               {!isQuizComplete && (
                 <>
-                  <ShinyButton
+                  <Button
                     className={`bg-purple-600 px-12 ${currentQuestionIndex > 0 ? 'opacity-100' : 'opacity-40 cursor-not-allowed'}`}
                     onClick={handlePrevious}
                     disabled={currentQuestionIndex === 0}
                   >
                     Previous
-                  </ShinyButton>
+                  </Button>
                   {!isSubmitted ? (
-                    <ShinyButton className="bg-purple-600 px-12" onClick={handleSubmit}>
+                    <Button className="bg-purple-600 px-12" onClick={handleSubmit}>
                       Submit
-                    </ShinyButton>
+                    </Button>
                   ) : (
-                    <ShinyButton className="bg-purple-600 px-12" onClick={handleNext}>
+                    <Button className="bg-purple-600 px-12" onClick={handleNext}>
                       {currentQuestionIndex === questionList.length - 1 ? 'Finish' : 'Next'}
-                    </ShinyButton>
+                    </Button>
                   )}
                 </>
               )}
               {showCheckResult && (
-                <ShinyButton className="bg-purple-600 px-12" onClick={handleCheckResult}>
+                <Button className="bg-purple-600 px-12" onClick={handleCheckResult}>
                   Check Result
-                </ShinyButton>
+                </Button>
               )}
             </div>
           </div>
