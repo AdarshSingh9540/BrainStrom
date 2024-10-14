@@ -38,7 +38,7 @@ export default function Result() {
 
 
   return (
-    <div className='flex justify-center items-center h-screen'>
+    <div className='flex justify-center items-center h-screen mx-2 lg:mx-0'>
     
         <motion.div
           key="results"
@@ -47,7 +47,7 @@ export default function Result() {
           exit={{ opacity: 0, scale: 1.2 }}
           transition={{ duration: 0.5 }}
         >
-          <Card className="w-full max-w-md mx-auto bg-white bg-opacity-10 backdrop-blur-md border-pink-500">
+          <Card className="w-full max-w-md  lg:mx-auto bg-white bg-opacity-10 backdrop-blur-md border-pink-500">
             <CardHeader>
               <CardTitle className="text-3xl text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
                 Quiz Results
@@ -66,7 +66,7 @@ export default function Result() {
                 {score}/{totalScore}
               </p>
               <p className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500 mb-4">
-                Total correct Questions: {correct}/{total}
+                Total correct Answers: {correct}/{total}
               </p>
               <p className="text-xl">
                 {message}

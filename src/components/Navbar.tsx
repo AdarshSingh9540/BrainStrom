@@ -12,17 +12,17 @@ export default async function Navbar() {
   const isUserAuthenticated = await isAuthenticated();
 
   return (
-    <div className="">
+    <div>
       <nav className="bg-black bg-opacity-30 backdrop-blur-md p-4 sticky top-0 z-10">
-        <div className="container mx-auto flex justify-between items-center">
+        <div className="container mx-auto flex justify-between items-center flex-wrap">
           <Link
             href="/"
             className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500 flex items-center"
           >
             <Sparkles className="mr-2" />
-            BrainStrom
+            BrainStorm
           </Link>
-          <div className="space-x-16">
+          <div className="hidden md:flex space-x-16">
             <Link href="/" className="hover:text-pink-400 transition-colors">
               Home
             </Link>
@@ -32,9 +32,15 @@ export default async function Navbar() {
             >
               About
             </Link>
+            <Link
+              href="/contact"
+              className="hover:text-pink-400 transition-colors"
+            >
+              Help
+            </Link>
           </div>
           {isUserAuthenticated ? (
-            <UserMenu user={user} />  
+            <UserMenu user={user} />
           ) : (
             <Button className="border">
               <RegisterLink className="text-white">Sign up</RegisterLink>

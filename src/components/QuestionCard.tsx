@@ -87,14 +87,14 @@ export default function QuestionCard() {
     <div>
       <div className="flex items-center justify-center h-screen">
         <ShineBorder
-          className="relative flex w-[60%] h-[400px] flex-col items-center justify-center overflow-hidden rounded-lg bg-background md:shadow-xl"
+          className="relative flex mx-2 lg:mx-0 lg:w-[60%] h-[400px] flex-col items-center justify-center overflow-hidden rounded-lg bg-background md:shadow-xl"
           color={['#A07CFE', '#FE8FB5', '#FFBE7B']}
         >
           <div className="flex flex-col items-center justify-center h-full p-4 text-white">
             <h2 className="text-xl font-semibold mb-4">Quiz Questions</h2>
             {!isQuizComplete && currentQuestion ? (
               <div className="mb-4">
-                <p className="text-lg">{currentQuestion.Question}</p>
+                <p className="text-lg my-2 mb-4">{currentQuestion.Question}</p>
                 <ul className="flex flex-col">
                   {currentQuestion.Options.map((option, index) => (
                     <li

@@ -26,7 +26,7 @@ export default function EnterTopic() {
               transition={{ duration: 0.5 }}
               className="flex flex-col items-center justify-center h-full"
             >
-              <h1 className="text-5xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
+              <h1 className="text-3xl  text-center  lg:text-start lg:text-5xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
                 BrainStrom Quiz Generator
               </h1>
               <p className="text-xl mb-8 text-center max-w-md">
