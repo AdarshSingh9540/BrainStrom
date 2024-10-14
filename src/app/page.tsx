@@ -1,12 +1,9 @@
-import EnterTopic from "@/components/EnterTopic";
-import QuestionCard from "@/components/QuestionCard";
-import Image from "next/image";
+import LandingPage from "@/components/HeroSection";
 
 export default function Home() {
   return (
        <>
-       {/* <QuestionCard/> */}
-       <EnterTopic/>
+       <LandingPage/>
        </>   
   );
 }

@@ -1,8 +1,16 @@
 import Link from "next/link";
 import React from "react";
-import { Sparkles, Brain, Trophy } from "lucide-react";
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
-export default function Navbar() {
+import { Sparkles } from "lucide-react";
+import { Button } from "./ui/button";
+import { RegisterLink } from "@kinde-oss/kinde-auth-nextjs/components";
+import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
+import UserMenu from "./UserMenu";  
+
+export default async function Navbar() {
+  const { getUser, isAuthenticated } = getKindeServerSession();
+  const user = await getUser();
+  const isUserAuthenticated = await isAuthenticated();
+
   return (
     <div className="">
       <nav className="bg-black bg-opacity-30 backdrop-blur-md p-4 sticky top-0 z-10">
@@ -25,13 +33,13 @@ export default function Navbar() {
               About
             </Link>
           </div>
-          <div className=" flex justify-center items-center ">
-          <Avatar>
-            <AvatarImage src="https://github.com/shadcn.png" />
-            <AvatarFallback>AS</AvatarFallback>
-          </Avatar>
-          <span className="px-4">Adarsh Singh</span>
-        </div>
+          {isUserAuthenticated ? (
+            <UserMenu user={user} />  
+          ) : (
+            <Button className="border">
+              <RegisterLink className="text-white">Sign up</RegisterLink>
+            </Button>
+          )}
         </div>
       </nav>
     </div>

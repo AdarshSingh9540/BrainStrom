@@ -27,10 +27,10 @@ export default function EnterTopic() {
               className="flex flex-col items-center justify-center h-full"
             >
               <h1 className="text-5xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
-                Sassy Quiz Generator
+                BrainStrom Quiz Generator
               </h1>
               <p className="text-xl mb-8 text-center max-w-md">
-                Ready to test your knowledge with a side of sass? Enter a topic and let's get quizzing!
+                Ready to test your knowledge with a side of BrainStrom? Enter a topic and let's get quizzing!
               </p>
               <div className="w-full max-w-md space-y-4">
                 <Input

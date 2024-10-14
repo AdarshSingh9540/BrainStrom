@@ -5,6 +5,8 @@ import { motion } from 'framer-motion'
 import { Trophy } from 'lucide-react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { Button } from './ui/button'
+import confetti from 'canvas-confetti'
+import { useEffect } from 'react'
 
 export default function Result() {
   const router = useRouter(); 
@@ -25,6 +27,15 @@ export default function Result() {
   } else {
     message = "Well, at least you made an effort. Keep working on the smart part!";
   }
+
+  useEffect(() => {
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 }
+      })
+    },[]);
+
 
   return (
     <div className='flex justify-center items-center h-screen'>
