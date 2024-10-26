@@ -12,13 +12,13 @@ interface User {
     given_name?: string | null;  // Allow null
     family_name?: string | null;  // Allow null
     email?: string | null;  // Allow null
-  }
+}
   
 interface UserMenuProps {
   user: User;
 }
 
-export default function UserMenu({ user }: UserMenuProps) {``
+export default function UserMenu({ user }: UserMenuProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
