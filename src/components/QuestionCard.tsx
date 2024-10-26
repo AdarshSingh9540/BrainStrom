@@ -237,9 +237,9 @@ export const QuestionContent = () => {
       <Dialog open={showTimeoutDialog} onOpenChange={setShowTimeoutDialog}>
         <DialogContent>
           <DialogHeader>
-            <DialogTitle>Time's Up!</DialogTitle>
+            <DialogTitle>Time&apos;s Up!</DialogTitle>
             <DialogDescription>
-              You didn't answer the question in time. The correct answer was: {currentQuestion?.answer}
+              You didn&apos;t answer the question in time. The correct answer was: {currentQuestion?.answer}
             </DialogDescription>
           </DialogHeader>
           <Button onClick={handleNext}>Next Question</Button>
