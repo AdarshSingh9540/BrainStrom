@@ -18,7 +18,7 @@ interface UserMenuProps {
   user: User;
 }
 
-export default function UserMenu({ user }: UserMenuProps) {
+export default function UserMenu({ user }: UserMenuProps) {``
   const [isOpen, setIsOpen] = useState(false);
 
   return (

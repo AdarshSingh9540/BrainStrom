@@ -16,7 +16,7 @@ export default function EnterTopic() {
 
   return (
     <div>
-      <main className="flex-grow container flex justify-center items-center h-screen mx-auto px-4 py-8">
+      <main className="flex-grow container flex justify-center items-center my-[10rem] mx-auto px-4 py-8">
         <AnimatePresence mode="wait">
           <motion.div
             key="home"
@@ -33,16 +33,19 @@ export default function EnterTopic() {
               Ready to test your knowledge with a side of BrainStrom? Enter a topic and let&apos;s get quizzing!
             </p>
             <div className="w-full max-w-md space-y-4">
-              <Input
-                type="text"
-                placeholder="Enter your quiz topic"
-                className="bg-white bg-opacity-20 border-pink-500 text-white placeholder-gray-300"
-                value={topic}
-                onChange={(e) => setTopic(e.target.value)}
-              />
+            <Input
+  type="text"
+  placeholder="Enter your quiz topic"
+  className="bg-white bg-opacity-20 border-pink-500 text-white placeholder-gray-300 rounded-lg"
+  style={{ borderRadius: '0.8rem' }} 
+  value={topic}
+  onChange={(e) => setTopic(e.target.value)}
+/>
+
               <Button
+               style={{ borderRadius: '0.8em' }} 
                 onClick={handleClick}
-                className="w-full bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white"
+                className="w-full rounded-lg bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white"
               >
                 Generate Quiz
               </Button>
